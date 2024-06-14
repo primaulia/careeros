@@ -1,7 +1,6 @@
 import { QuestType } from "../types/QuestType";
 import "./Quest.scss";
 
-import installExtension from "../images/installExtension.png";
 import todo from "../images/todo.png";
 import installIcon from "../images/installIcon.png";
 import { parser } from "../utils/dataParser";

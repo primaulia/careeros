@@ -12,7 +12,7 @@ export const parser = (data: QuestType) => {
       return {
         title: "Install the CareerOS Chrome Extension",
         description:
-          "Don`t forget buy a wUnlock the superpowers of CareerOS with our Chrome Extension. This plugin lets you save companies, contacts, and jobs from Linkedin and other job boards. It also lets you access our messaging template and send Linkedin messages directly from CareerOS.",
+          "Unlock the superpowers of CareerOS with our Chrome Extension. This plugin lets you save companies, contacts, and jobs from Linkedin and other job boards. It also lets you access our messaging template and send Linkedin messages directly from CareerOS.",
         icon: installExtension,
       };
     case "submit_application":
@@ -48,7 +48,7 @@ export const parser = (data: QuestType) => {
         }`,
         description:
           "Send a customized LinkedIn message to reach out to your new contact. Don't worry! We'll help you with the wording.",
-        icon: contact!.profile_image,
+        icon: "https://thispersondoesnotexist.com/",
       };
     case "send_linkedin_connection":
       return {
@@ -57,7 +57,7 @@ export const parser = (data: QuestType) => {
         )}  at ${company!.name}`,
         description:
           "Send an invitation with a tailored message to your new contact. Our AI will help you!",
-        icon: contact!.profile_image,
+        icon: "https://thispersondoesnotexist.com/",
       };
     case "send_first_email":
       return {
@@ -67,7 +67,7 @@ export const parser = (data: QuestType) => {
         description: `Send a first email to ${contactFullname(contact!)} at ${
           company!.name
         } to get a conversation started.`,
-        icon: contact!.profile_image,
+        icon: "https://thispersondoesnotexist.com/",
       };
     case "add_new_contact":
       return {
@@ -91,7 +91,7 @@ export const parser = (data: QuestType) => {
         }`,
         description:
           "Send a follow-up email to [contact name] at [company] to get a conversation started.",
-        icon: contact!.profile_image,
+        icon: "https://thispersondoesnotexist.com/",
       };
   }
 };
