@@ -2,6 +2,7 @@ import { QuestType } from "../types/QuestType";
 import "./Quest.scss";
 
 import install_extension from "../images/install_extension.png";
+import todo from "../images/todo.png";
 
 const ActionButton = ({ type }: { type: string }) => {
   if (type.includes("install")) {
@@ -10,7 +11,19 @@ const ActionButton = ({ type }: { type: string }) => {
     );
   }
 
-  return <h1>{type}</h1>;
+  return (
+    <a
+      onClick={() => {
+        console.log("click todo link");
+      }}
+    >
+      <img
+        className="card__action card__action--todolink"
+        src={todo}
+        alt="Todo link"
+      />
+    </a>
+  );
 };
 
 export const Quest = ({ quest }: { quest: QuestType }) => {
