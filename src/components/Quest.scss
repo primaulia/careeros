@@ -1,0 +1,48 @@
+.quest {
+  border: 1px solid #DAE5E4;
+  border-radius: 16px;
+  padding: 24px;
+  margin-top: 24px;
+
+  &__wrapper {
+    height: 400px;
+    overflow-y: scroll;
+    padding: 4px;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+}
+
+.card {
+  background: white;
+  display: flex;
+  border-radius: 8px;
+  box-shadow: 0 0 4px 1px rgba(151, 71, 255, 0.15);
+  margin-bottom: 20px;
+  padding: 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__title {
+    font-size: 16px;
+    margin-bottom: 4px;
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    margin-top: 0;
+    line-height: 24px;
+  }
+
+  &__description {
+    font-size: 14px;
+    color: #6F7979;
+    margin: 0;
+    line-height: 20px;
+  }
+}

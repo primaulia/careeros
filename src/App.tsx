@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import "./App.scss";
 import { Quest } from "./components/Quest";
 import type { QuestType } from "./types/QuestType";
 
@@ -18,13 +17,15 @@ function App() {
 
   return (
     <div className="container">
-      <h1>Quest</h1>
+      <div className="quest">
+        <h1 className="quest__title">Quest</h1>
 
-      <ul>
-        {quests?.map((quest) => (
-          <Quest quest={quest} key={quest.id} />
-        ))}
-      </ul>
+        <div className="quest__wrapper">
+          {quests?.map((quest) => (
+            <Quest quest={quest} key={quest.id} />
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
