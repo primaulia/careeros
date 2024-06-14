@@ -8,14 +8,14 @@ import { parser } from "../utils/dataParser";
 const ActionButton = ({ type, link }: { type: string; link: string }) => {
   if (type.includes("install")) {
     return (
-      <button className="card__action card__action--install">
+      <a href={link} className="card__action card__action--install">
         Install{" "}
         <img
           className="card__action--installIcon"
           src={installIcon}
           alt="install icon"
         />
-      </button>
+      </a>
     );
   }
 
