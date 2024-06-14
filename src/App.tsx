@@ -1,23 +1,30 @@
-import logo from "./logo.svg";
+import { useEffect, useState } from "react";
 import "./App.scss";
+import { Quest } from "./components/Quest";
+import type { QuestType } from "./types/QuestType";
 
 function App() {
+  const [quests, setQuests] = useState<QuestType[]>();
+  useEffect(() => {
+    const fetchQuests = async () => {
+      const response = await fetch("http://localhost:3000/quests");
+      const data = await response.json();
+
+      setQuests(data);
+    };
+
+    fetchQuests();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <h1>Quest</h1>
+
+      <ul>
+        {quests?.map((quest) => (
+          <Quest quest={quest} key={quest.id} />
+        ))}
+      </ul>
     </div>
   );
 }
