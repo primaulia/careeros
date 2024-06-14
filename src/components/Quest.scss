@@ -69,10 +69,13 @@
       border: none;
       font-family: "Lato", sans-serif;
       font-weight: 400;
+      width: 140px;
     }
 
-    &--todolink {
-      width: 28px;
+    &--installIcon {
+      position: relative;
+      top: 1px;
+      margin-left: 3px;
     }
   }
 }
