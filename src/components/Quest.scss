@@ -19,6 +19,8 @@
 .card {
   background: white;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   border-radius: 8px;
   box-shadow: 0 0 4px 1px rgba(151, 71, 255, 0.15);
   margin-bottom: 20px;
@@ -26,6 +28,11 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  &__icon {
+    margin-right: 16px;
+    width: 45px;
   }
 
   &__title {
@@ -44,5 +51,23 @@
     color: #6F7979;
     margin: 0;
     line-height: 20px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    /* Change this number to the desired number of lines */
+    overflow: hidden;
+  }
+
+  &__action {
+    margin-left: 16px;
+
+    &--install {
+      color: white;
+      background-color: #004850;
+      padding: 4px 8px;
+      border-radius: 4px;
+      border: none;
+      font-family: "Lato", sans-serif;
+        font-weight: 400; }
   }
 }
