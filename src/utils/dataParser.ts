@@ -1,5 +1,9 @@
 import { QuestType } from "../types/QuestType";
 import installExtension from "../images/installExtension.png";
+import resolveComment from "../images/resolveComment.png";
+import saveContact from "../images/saveContact.png";
+import scheduleCoffee from "../images/scheduleCoffee.png";
+import submitApplication from "../images/submitApplication.png";
 import dayjs from "dayjs";
 
 const contactFullname = (contact: { first_name: string; last_name: string }) =>
@@ -21,14 +25,14 @@ export const parser = (data: QuestType) => {
       return {
         title: `Submit your application for ${job!.title} at ${company!.name}`,
         description: `Deadline: ${dayjs(due_date).format("DD/MM/YYYY")}`,
-        icon: installExtension,
+        icon: submitApplication,
         link: company!.linkedin_url,
       };
     case "resolve-comment":
       return {
         title: `Resolve a comment from [CA name]`,
         description: "You have an unresolved comment from your Career Advisor.",
-        icon: installExtension,
+        icon: resolveComment,
         link: "#",
       };
     case "save_first_company":
@@ -36,7 +40,7 @@ export const parser = (data: QuestType) => {
         title: `Save your first company`,
         description:
           "Browse our company database for your favorite companies or new inspiration and save your first company to get started.",
-        icon: installExtension,
+        icon: saveContact,
         link: "#",
       };
     case "add_contact":
@@ -92,7 +96,7 @@ export const parser = (data: QuestType) => {
         }`,
         description:
           "Get unique insights from your new contact by scheduling an informational interview with them. Make sure to use our coffee chat tips to prepare for your meeting.",
-        icon: installExtension,
+        icon: scheduleCoffee,
         link: contact!.linkedin_url,
       };
     case "send_follow_up_email":
