@@ -5,7 +5,7 @@ import todo from "../images/todo.png";
 import installIcon from "../images/installIcon.png";
 import { parser } from "../utils/dataParser";
 
-const ActionButton = ({ type }: { type: string }) => {
+const ActionButton = ({ type, link }: { type: string; link: string }) => {
   if (type.includes("install")) {
     return (
       <button className="card__action card__action--install">
@@ -20,11 +20,7 @@ const ActionButton = ({ type }: { type: string }) => {
   }
 
   return (
-    <a
-      onClick={() => {
-        console.log("click todo link");
-      }}
-    >
+    <a href={link}>
       <img src={todo} alt="Todo link" />
     </a>
   );
@@ -36,11 +32,11 @@ export const Quest = ({ quest }: { quest: QuestType }) => {
   return (
     <div className="card">
       <img className="card__icon" src={parsedData!.icon} alt="Test" />
-      <div>
+      <div className="card__content">
         <h3 className="card__title">{parsedData!.title}</h3>
         <p className="card__description">{parsedData!.description}</p>
       </div>
-      <ActionButton type={quest.type} />
+      <ActionButton type={quest.type} link={parsedData!.link} />
     </div>
   );
 };
